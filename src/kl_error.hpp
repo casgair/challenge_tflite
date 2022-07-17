@@ -1,0 +1,10 @@
+#ifndef KL_CHALLENGE_KL_ERROR_H
+#define KL_CHALLENGE_KL_ERROR_H
+
+enum class KLError {
+    NONE = 0,
+    MODEL_LOAD_ERROR = 100,
+    MODEL_INFERENCE_ERROR
+};
+
+#endif //KL_CHALLENGE_KL_ERROR_H

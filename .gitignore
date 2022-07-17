@@ -1,0 +1,7 @@
+.DS_Store
+.idea/*
+build/*
+!assets/models/.keep
+assets/models/*
+cmake-build-debug/*
+*/venv
