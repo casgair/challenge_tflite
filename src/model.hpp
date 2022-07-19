@@ -18,7 +18,12 @@ public:
 
 private:
 
-    static void convert_image(const cv::Mat &src, float *dest);
+    static const int CHANNELS = 3;
+    static const int HEIGHT = 80;
+    static const int WIDTH = 80;
+
+    void convert_image(const cv::Mat &src, float *dest);
+    static void softmax(float* input, size_t size);
 
     std::unique_ptr<tflite::FlatBufferModel> model_;
     std::unique_ptr<tflite::Interpreter> interpreter_;
