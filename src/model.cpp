@@ -70,8 +70,8 @@ float Model::inference(const char *img_path) {
 void Model::convert_image(const cv::Mat &src, float * dest) {
 
     // I'm not too proud of this hacky and probably slow solution, I'm sure there is a better way to do this (or circumvent it)
-    for(int i=0; i<this->HEIGHT;i++){
-        for(int j=0; j<this->WIDTH;j++){
+    for(int i=0; i<src.rows;i++){
+        for(int j=0; j<src.cols;j++){
             float b = src.ptr<float>(i,j)[0];
             float g = src.ptr<float>(i,j)[1];
             float r = src.ptr<float>(i,j)[2];
