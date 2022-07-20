@@ -70,6 +70,7 @@ float Model::inference(const char *img_path) {
 void Model::convert_image(const cv::Mat &src, float * dest) {
 
     // I'm not too proud of this hacky and probably slow solution, I'm sure there is a better way to do this (or circumvent it)
+    // Goes through all pixels in src (HWC) and adds them to dest in CHW format
     for(int i=0; i<src.rows;i++){
         for(int j=0; j<src.cols;j++){
             float b = src.ptr<float>(i,j)[0];
